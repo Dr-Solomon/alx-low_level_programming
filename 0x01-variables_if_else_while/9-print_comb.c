@@ -6,18 +6,27 @@
  */
 int main(void)
 {
-	int n;
+	int x, y, z;
 
-	for (n = 0; n < 9; n++)
+	for (x = '0'; x < '9'; x++)
 	{
-		putchar(n);
+	for (y = x + 1; y <= '9'; y++)
+	{
+	for (z = y + 1; z <= '9'; z++)
+	{
+		if ((x != y) != z)
+	{
+		putchar(x);
+		putchar(y);
+		putchar(z);
+		if (x == '7' && y == '8')
+			continue;
+		putchar(',');
+		putchar(' ');
 	}
-		if (n != 8)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	putchar('\n');
+	}
+	}
+	}
+	 putchar('\n');
 	return (0);
 }
-
