@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible combinations of singe  digits
+ * main - prints all possible combinations of single  digits
  * Return: Always 0
  */
 int main(void)
@@ -10,9 +10,14 @@ int main(void)
 
 	for (a = 0; a < 10; a++)
 	{
-		putchar(a + '0');
-		putchar(',');
-		putchar(' ');
+		if (a == 9)
+			putchar(a + '0');
+		else
+		{
+			putchar(a + '0');
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	return (0);
 }
