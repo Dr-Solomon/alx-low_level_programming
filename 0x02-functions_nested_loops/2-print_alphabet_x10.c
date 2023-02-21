@@ -3,18 +3,21 @@
 /**
  * print_alphabet_x10 - function that prints alphabet 10 times
  *
- * Return: Always 0 (Success)
+ * Return: void
  */
-void print_alphabet_x10(void);
-{
-	int count = 0;
-	char j;
 
-		while (count++ <= 9)
+void print_alphabet_x10(void)
+{
+	char j = 'a';
+	int i = 0;
+
+		for (i = 0; i < 10; i++)
 		{
 
 			for (j = 'a'; j <= 'z'; j++)
+			{
 				_putchar(j);
+			}
 			_putchar('\n');
 		}
 }
