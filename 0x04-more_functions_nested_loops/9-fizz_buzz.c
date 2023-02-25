@@ -12,7 +12,7 @@ int main(void)
 	for (i = 2; i <= 100; i++)
 	{
 		prinf(" ");
-		if (i % 3 == 3)
+		if (i % 3 == 0)
 			printf("Fizz");
 		if (i % 5 == 0)
 			printf("Buzz");
