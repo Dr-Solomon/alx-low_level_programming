@@ -7,14 +7,14 @@
  */
 int _atoi(char *s)
 {
-	int i, d, n, len, m, k;
+	int i, d, n, len, m, digit;
 
 	i = 0;
 	d = 0;
 	n = 0;
 	len = 0;
 	m = 0;
-	k = 0;
+	digit = 0;
 
 	while (s[len] != '\0')
 		len++;
@@ -26,14 +26,14 @@ int _atoi(char *s)
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			k = s[i] - '0';
+			digit = s[i] - '0';
 			if (d % 2)
-				k = -k;
-			n = n * 10 + k;
+				digit = -digit;
+			n = n * 10 + digit;
 			m = 1;
 			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
-			m = 1;
+			m = 0;
 		}
 		i++;
 	}
