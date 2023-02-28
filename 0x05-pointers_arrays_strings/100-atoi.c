@@ -36,6 +36,7 @@ int _atoi(char *s)
 			m = 0;
 		}
 		i++;
+		_putchar('\n');
 	}
 	if (m == 0)
 		return (0);
